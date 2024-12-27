@@ -1,0 +1,18 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "packageRules": [
+      {
+        "description": "official images",
+        "matchDatasources": ["docker"],
+        "matchPackageNames": ["/^[a-z-]+$/"],
+        "replacementNameTemplate": "harbor.tools.vorwerk-digital.com/dockerhub/{{{packageName}}}"
+      }
+    ],
+    "labels": ["Renovate"],
+    "platformAutomerge": true,
+    "dependencyDashboard": true,
+    "registryAliases": {
+      "harbor.tools.vorwerk-digital.com/dockerhub": "docker.io",
+      "harbor.tools.vorwerk-digital.com/ghcr": "ghcr.io"
+    }
+  }
